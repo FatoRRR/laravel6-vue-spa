@@ -6,9 +6,7 @@
         <title>{{ config('app.name') }}</title>
     </head>
     <body>
-        <div id="app">
-            <app></app>
-        </div>
+        <app id="app"></app>
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
