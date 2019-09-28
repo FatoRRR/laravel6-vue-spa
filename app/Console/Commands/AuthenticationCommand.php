@@ -60,6 +60,8 @@ class AuthenticationCommand extends Command
             default:
                 break;
         }
+
+        exec('git stash apply');
     }
 
     public function migrate()
