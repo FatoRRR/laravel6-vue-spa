@@ -43,6 +43,8 @@ class AuthenticationCommand extends Command
             $type = strtolower($this->choice('Choose your type', ['Booth', 'JWT', 'OAuth']));
         }
 
+        exec('git stash');
+
         $this->migrate();
 
         switch (strtolower($type)) {
@@ -65,7 +67,7 @@ class AuthenticationCommand extends Command
         $this->info('Migrating tables');
         exec('git remote add migrations https://github.com/FatoRRR/laravel6-vue-spa.git');
         exec('git remote update');
-        exec('git merge --allow-unrelated-histories migrations/feature/auth-migrations');
+        exec('git merge --no-commit migrations/feature/auth-migrations');
         exec('git remote rm migrations');
     }
 
