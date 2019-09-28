@@ -1,3 +1,0 @@
-[submodule "auth-migrations"]
-	path = auth-migrations
-	url = https://github.com/FatoRRR/laravel6-vue-spa.git
