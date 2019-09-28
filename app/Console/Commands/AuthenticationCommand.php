@@ -69,7 +69,7 @@ class AuthenticationCommand extends Command
         $this->info('Migrating tables');
         exec('git remote add migrations https://github.com/FatoRRR/laravel6-vue-spa.git');
         exec('git remote update');
-        exec('git merge --no-commit migrations/feature/auth-migrations');
+        exec('git merge --allow-unrelated-histories --no-commit migrations/feature/auth-migrations');
         exec('git remote rm migrations');
     }
 
