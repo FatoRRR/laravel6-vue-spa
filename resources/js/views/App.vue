@@ -13,7 +13,7 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700&display=swap');
 
-*, html, body {
+html, body, #app {
   background: linear-gradient(to bottom right, #202040 65%, #202060);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

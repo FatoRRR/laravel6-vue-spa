@@ -12,10 +12,12 @@ export default {
 
 <style lang="scss">
 .home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 5em;
     font-weight: 200;
     text-transform: uppercase;
