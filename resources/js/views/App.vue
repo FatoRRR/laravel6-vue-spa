@@ -1,7 +1,9 @@
 <template>
   <div>
     <Navigation></Navigation>
-    <router-view></router-view>
+    <div class="app-content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -37,6 +39,10 @@ html, body, #app {
   width: 100%;
   margin: 0px;
   background-attachment: fixed;
+}
+
+.app-content {
+  margin-top: 70px;
 }
 
 .checkbox {

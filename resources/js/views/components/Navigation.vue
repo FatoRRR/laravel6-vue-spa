@@ -2,14 +2,14 @@
   <div class="navigation">
     <div class="hamburger"></div>
     <div class="links"></div>
-    <div class="profile" v-if="$store.state.user === undefined">
+    <div class="profile" v-if="user === undefined">
       <Register/>
       <Login/>
     </div>
     <div class="profile" v-else>
       <i @click="displayProfileNavigation = !displayProfileNavigation" class="material-icons">account_circle</i>
       <nav v-if="displayProfileNavigation">
-        <div>Your Profile</div>
+        <div @click="$router.push('profile'), displayProfileNavigation = false">Your Profile</div>
         <div>Settings</div>
         <div @click="logout">Sign Out</div>
       </nav>
@@ -33,6 +33,11 @@ export default {
       displayProfileNavigation: false,
     };
   },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    },
+  },
   methods: {
     logout() {
       this.$store.dispatch('LOGOUT');
@@ -43,12 +48,13 @@ export default {
 
 <style lang="scss">
 .navigation {
-  position: fixed;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  display: flex;
   height: 60px;
   width: 100%;
+  top: 0px;
   flex: 3;
 
   .profile {
