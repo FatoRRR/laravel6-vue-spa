@@ -1,12 +1,18 @@
 <template>
   <div>
+    <Navigation></Navigation>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Navigation from '@/views/components/Navigation'
+
 export default {
   name: 'App',
+  components: {
+    Navigation,
+  },
 }
 </script>
 
@@ -23,8 +29,6 @@ html, body, #app {
   padding: 0px;
   width: 100%;
   margin: 0px;
-  -webkit-text-stroke: 0.45px;
-  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
-  text-shadow: rgba(0, 0, 0, 0.3) -15px -8px 6px;
+  background-attachment: fixed;
 }
 </style>
