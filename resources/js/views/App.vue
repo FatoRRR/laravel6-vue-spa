@@ -19,7 +19,8 @@ export default {
     if (this.$store.state.token !== '') {
       axios.defaults.headers.common['Authorization'] = 'bearer ' + this.$store.state.token;
       axios.get('/api/auth/user', this.$store.state.token)
-      .then(response => this.$store.commit('UPDATE_USER', response.data.user));
+      .then(response => this.$store.commit('UPDATE_USER', response.data.user))
+      .catch(error => this.$store.commit('UPDATE_TOKEN'));
     }
   }
 };

@@ -9,11 +9,10 @@
     <div class="profile" v-else>
       <i @click="displayProfileNavigation = !displayProfileNavigation" class="material-icons">account_circle</i>
       <nav v-if="displayProfileNavigation">
-        <div @click="$router.push('profile'), displayProfileNavigation = false">Your Profile</div>
+        <div @click="$router.push('/profile'), displayProfileNavigation = false">Your Profile</div>
         <div>Settings</div>
         <div @click="logout">Sign Out</div>
       </nav>
-
     </div>
   </div>
 </template>

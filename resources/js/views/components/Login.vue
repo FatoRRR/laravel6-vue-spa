@@ -71,8 +71,8 @@ export default {
           })
           .then(response => {
               if (this.stayLoggedIn) {
-                  localStorage.setItem('token', response.headers.authorization);
-                  axios.defaults.headers.common['Authorization'] = response.headers.authorization;
+                localStorage.setItem('token', response.headers.authorization);
+                axios.defaults.headers.common['Authorization'] = response.headers.authorization;
               }
               this.$store.commit('UPDATE_USER', response.data.user);
           })
