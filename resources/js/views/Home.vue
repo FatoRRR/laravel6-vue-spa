@@ -22,6 +22,9 @@ export default {
     font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 4px;
+    -webkit-text-stroke: 0.45px;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    text-shadow: rgba(0, 0, 0, 0.3) -15px -8px 6px;
   }
 }
 </style>
