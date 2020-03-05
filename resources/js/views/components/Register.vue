@@ -22,7 +22,7 @@
       </div>
       <div class="modal-actions">
         <div class="input">
-          <input class="button" type="submit" @click="register" :value="'Login'">
+          <input class="button" type="submit" @click="register" :value="'Regsiter'">
           <span v-if="error !== ''" class="error">{{ error }}</span>
         </div>
       </div>
